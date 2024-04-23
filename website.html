@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Height Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Height Calculator</h1>
+        <form>
+            <label for="heightInput">Enter your height:</label><br>
+            <input type="text" id="heightInput" name="height"><br><br>
+            <input type="button" value="Submit" onclick="calculateHeight()">
+        </form>
+
+        <p id="output"></p>
+
+        <script>
+            function calculateHeight() {
+                var height = document.getElementById("heightInput").value;
+                document.getElementById("output").innerHTML = "Your height is " + height + ".";
+            }
+        </script>
+    </div>
+</body>
+</html>
